@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">        
+    <title>My First React Component</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0-rc/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0-rc/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+
+</head>
+<body>
+    <h1>Welcome to my first React App</h1>
+    <p>Below there's an image of a cute cat in a box.</p>
+    <!-- React Component will reside inside this div with #app id -->
+    <div id="app"></div>
+    <script type="text/babel">
+        class Pet extends React.Component {
+            render() {                
+                return (
+                    <div>
+                        <h2>Moxie</h2>
+                        <img src="https://github.com/tigarcia/Moxie/raw/master/moxie.png" alt="moxie my cat" />
+                    </div>
+                )
+            }
+        }
+        // This is where we tell React where to put the element... it will be like its #root
+        // We can use JSX here too!
+        ReactDOM.render(<Pet />, document.getElementById('app'));
+    </script>
+    
+</body>
+</html>
